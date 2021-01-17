@@ -1,0 +1,1 @@
+- [<portal>元素的安全性分析 - Chrome 浏览器最近开始支持<portal>元素。它基本上是一个更安全的<iframe>，建立一个彻底的沙箱，用于在一张网页里面插入另一张网页。](https://research.securitum.com/security-analysis-of-portal-elem)

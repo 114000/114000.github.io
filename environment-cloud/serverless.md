@@ -1,0 +1,2 @@
+- [Cloudflare workers - Cloudflare 正式发布 workers 功能了，允许网站直接部署在它的边缘网络，即 CDN 的每个节点上面。这应该是目前 serverless 最好的方案了。](https://workers.cloudflare.com/)
+- [Cloud Run 托管网站 - Cloud Run 是谷歌云的一个 Serverless 服务，特点是直接抓取 Docker 镜像文件运行，不用自己部署文件。](https://blog.mrtrustor.net/post/making-this-blog-with-cloud-run/)

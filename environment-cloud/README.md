@@ -1,0 +1,17 @@
+
+
+- [如何打造一个serverless的微信小程序 - 作者使用 AWS Lambda 作为后端，开发了一个背单词的微信小程序《世凝听记》](https://www.smilingleo.net/2020/how-to-build-a-serverless-wechat-mini-program/)
+- [AWS 如何添加用户 - 这篇文章教你入门亚马逊网络服务 AWS，最基本的一步，新增一个管理员用户。这里还有一篇类似的文章，介绍如何使用 IAM 服务新增 AWS 用户。](https://ncona.com/2020/03/introduction-to-aws-cli/)
+- [AWS 网络介绍](https://grahamlyons.com/article/everything-you-need-to-know-about-networking-on-aws)
+- [如何用 AWS Amplify 托管网站 - AWS Amplify 是亚马逊的持续集成服务，作为一个简单的网站托管方案，可以直接从源码构建网站，然后自动部署。](https://medium.com/seekrev/why-we-use-aws-amplify-for-hosting-web-clients-f50618df)
+- [AWS 上搭建免费的 Wireguard 服务](https://habr.com/en/post/449234/)
+- [如何使用 AWS S3 和 Cloudflare 托管免费网站](https://medium.com/better-programming/how-to-host-your-personal-website-for-free-3101c4ab2e49)
+- [如何使用 AWS LAMBDA 做一个 YOUTUBE MP3 下载器 - 作者做了一个 Bookmarklet。浏览 Youtube 的时候，只要按一下这个书签工具，就会把请求发到 AWS LAMBDA，然后抓取 Youtube 流文件，转码成 mp3 文后以后存到 S3，再返回下载地址。](http://intoli.com/blog/youtube-mp3-downloader/) 
+- [AWS 的所有 IP 地址](https://ip-ranges.amazonaws.com/ip-ranges.json)
+- [VPS 搜索工具 - 通过各种搜索条件，比较不同的主机商品，看看哪个云主机最好用](https://anothervps.com/vps/)
+- [DNS 1.1.1.1 - 该网站提供指导，如何将各种操作系统或设备的 DNS 设为 1.1.1.1。](https://1.1.1.1/)
+- [了解 Linux 容器技术 - 容器实际上是 Linux 进程的一种特殊封装，这组系列文章介绍了容器的底层知识。](http://pierrchen.blogspot.com/2018/08/understand-container-index.html)
+- [在 Google Bucket 托管静态网站](http://stephenmann.io/post/hosting-a-hugo-site-in-a-google-bucket/) 
+- [腾讯云软件源](https://mirrors.cloud.tencent.com/)
+- [其他软件源](https://github.com/ruanyf/weekly/issues/663#issuecomment-509151513)
+- [Amazon Lambda 的通俗解释](http://www.zeroequalsfalse.press/2019/02/13/what-is-lambda/)

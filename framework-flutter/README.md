@@ -1,0 +1,7 @@
+- [深入理解 flutter 的编译原理与优化](https://yuque.com/xytech/flutter/sh4fbm) 
+- [如何使用 Flutter 制作一个 iPhone 计算器？](https://hackernoon.com/how-to-build-iphone-calculator-using-flutter-fe934ce78d7e)
+- [QR Code Scanner - Flutter 的二维码扫描插件](https://github.com/leyan95/qrcode_sca)
+- [全平台框架 Flutter](https://developers.googleblog.com/2019/05/Flutter-io19.html)
+- [morec 一个 Flutter 制作的电影 App，用于学习 Flutter](https://github.com/Mayandev/morec)
+- [flutter-desktop-embedding](https://github.com/google/flutter-desktop-embedding)
+-[Fluttify - 一个 Flutter 框架的插件开发工具，解决了插件开发过程中的类型安全，编码繁琐等痛点，](https://fluttify.com/)

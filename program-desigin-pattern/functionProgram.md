@@ -1,0 +1,1 @@
+- [理解 Y Combinator - Y Combinator 是函数式编程的重要概念。本文较为通俗地一步步推导它](https://mvanier.livejournal.com/2897.)
