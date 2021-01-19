@@ -1,3 +1,3 @@
 * [导航](/)
 
-- [NOTE](lang-js/README)
+- [Language-JavaScript](lang-js/README)

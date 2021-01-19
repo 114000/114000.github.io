@@ -13,7 +13,7 @@ title: Antd(React) tips
 ```
 
 
-### Antd Form 自定义表单空间报错 
+### Antd Form 自定义表单控件报错 
 
 ``` jsx
 const ChildComponent = (props, ref) =>{

@@ -1,7 +1,12 @@
----
-title: CSS 相关有趣的项目
-date: 2019-01-01
----
+
+- [Background](/lang-css/background.md)
+- [Flex](/lang-css/flex.md)
+
+- [CSS Tips](/lang-css/tip.md)
+- [Css Reset](/lang-css/reset.md)
+
+## 有趣的外链
+
 - [CSS 打印样式10分钟教程](https://www.paperplane.app/blog/print-css-basics/)
 - [css-protips - 一个收集 CSS 使用技巧的库。](https://github.com/AllThingsSmitty/css-protips/tree/master/translations/zh-CN)
 - [页面加载动画 - 这篇文章收集了近20个加载页面的优秀动画效果。](https://medium.com/@ann.green/loading-indicators-e9d9ac9680b)

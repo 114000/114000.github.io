@@ -1,16 +1,41 @@
+
+
+## 语法
+
+- [正则表达式](/lang-js/regexp.md)
+- [Promise](/lang-js/promise.md)
+- [模块与解构](/lang-js/module.md)
+- [类](/lang-js/class.md)
+- [DOM操作](/lang-js/dom.md)
+
+## 最佳实践
+
+- [最佳实践](/lang-js/awesome.md)
+
+## 库的使用
+
+- [dreamjs mock 数据](/lang-js/dreamjs.md)
+- [lodash](/lang-js/lodash.md)
+
+## 你不知道的 JavaScript
+
+- [01.作用域与闭包](/lang-js/you-dont-know-javascript-01.md)
+- [02.this](/lang-js/you-dont-know-javascript-02.md)
+- [03.对象原型](/lang-js/you-dont-know-javascript-03.md)
+- [04.类型和语法](/lang-js/you-dont-know-javascript-04.md)
+
+## 有趣的外链
+
 - [《ECMAScript 6 入门》](http://es6.ruanyifeng.com/#docs/promise)
 - [《javascript Promise 迷你书》](http://liubin.org/promises-book/)
-
----
-
-- [MDN-Javascript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference)||
+- [MDN-Javascript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference)
 - [tlsh-js - 一个生成字符串哈希的 JavaScript 库。它的特点是，字符串越相似，或者重复同样的模式，生成的哈希也越相似，可以用来计算两个字符串的相似程度。](https://github.com/andlabs/libui)
 - [tesseract.js 一个可以完成 62 种语言 OCR （光学识别）的 JS 库。](https://github.com/naptha/tesseract.js)
 - [JavaScript 如何复制对象](https://smalldata.tech/blog/2018/11/01/copying-objects-in-javascript)
 - [async 函数的使用模式 - async 函数是 JavaScript 语言新增的异步解决方案，本文通过许多例子，介绍它比 Promise 好在哪里。](https://careersjs.com/magazine/async-patte)
 - [2018年 JavaScript 明星项目](https://risingstars.js.org/2018/zh/)
 - [JavaScript 模块简史](https://ponyfoo.com/articles/brief-history-of-modularity)
-- [MazeSolverGenerator 一个在 <canvas> 元素上绘制和解决迷宫的 JavaScript 库。](https://github.com/dmaydan/Maze_Solver_Generator)
+- [MazeSolverGenerator 一个在 canvas 元素上绘制和解决迷宫的 JavaScript 库。](https://github.com/dmaydan/Maze_Solver_Generator)
 - [JavaScript 互动教程](https://learnjavascript.online/)
 - [BitMatrix - 矩阵数据结构的 JavaScript 库，使用了底层的二进制接口，性能较好](https://github.com/cnwhy/BitMatrix)
 - [licia - 这个库收集 Web 开发的各种 JavaScript 小工具，使得开发者只用加载它一个库即可，跟 lodash 的思路有点像](https://github.com/liriliri/licia)
