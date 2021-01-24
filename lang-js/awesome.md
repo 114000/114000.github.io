@@ -65,6 +65,20 @@ const growTreesPromise = (...args) => {
 }
 ```
 
+### async / await 实现异步循环
+
+``` js
+asyncFunctions.reduce(async (result, current) => {
+
+  const res = await current() 
+
+  // res => result
+
+  return result
+
+}, result)
+```
+
 ---
 
 待整理
