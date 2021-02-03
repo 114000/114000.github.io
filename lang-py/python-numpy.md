@@ -129,3 +129,11 @@ sigmoid = lambda x: 1 / (1 + np.exp(-x))
 
 
 divide
+
+## 保存文件 
+
+``` py
+savetxt('test.txt',x,'%i')
+
+x = loadtxt('test.txt')
+``` 

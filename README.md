@@ -1,6 +1,7 @@
 ## Coloration
 
-- [Asker](/coloration/asker-api.md)
+- [Asker API](/coloration/asker-api.md)
+- [Asker 手册](/coloration/asker-manual.md)
 - [Kit](/coloration/kit-api.md)
 
 ## 工具
