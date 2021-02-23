@@ -224,9 +224,9 @@ Asker.batch(
 .then(allResponses => {})
 ```
 
-### Custom & Mock
+### Custom Adapter & Mock
 
-The `jsonp` and `batch` methods are implemented by `apater`. You also could implement some other methods. Other platforms, for example, miniprogram, the enviorment support JavaScript, but not support `XMLHTTPRequest`.
+The `jsonp` and `batch` methods are implemented by `adpater`. You also could implement some other methods. Other platforms, for example, miniprogram, the enviorment support JavaScript, but not support `XMLHTTPRequest`.
 
 ``` js
 export function get (url, params, conf) {
@@ -237,6 +237,38 @@ export function get (url, params, conf) {
     }
   }))
 }
+```
+
+#### Uniapp Request Example 
+
+``` js
+import { Asker } from '@coloration/asker'
+
+function uniappRequestAdapter (conf, defRes) {
+  return new Promise((resolve, reject) => {
+    uni.request({
+      url: conf.uri,
+      method: String(conf.method).toUpperCase(),
+      data: conf.body,
+      success (response) {
+        defRes.statusCode = response.statusCode
+        defRes.data = response.data
+
+        response.statusCode === 200 ? resolve(defRes) : reject(defRes)
+      },
+      fail: reject
+    })
+  })
+}
+
+// demo 1
+const api = new Asker({ 
+  adapter: uniappRequestAdapter
+})
+
+// demo 2: WARN!: global override
+Asker.adapter = uniappRequestAdapter
+const api = new Asker()
 ```
 
 You are mocking when you return a data in the `adapter` function instead of the promise. You could also pass a normal data to `adapter`.
