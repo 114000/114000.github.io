@@ -61,8 +61,16 @@
 2. 登录并输入信息:  `$ npm login`
 3. 发布: `$ npm publish --access public`
 
+## 版本号
 
-## 版本号约束
+### 版本号表示
+
+- `0.0.1-alpha.1`
+- `0.0.1-beta.1`
+- `0.0.1-rc.1`
+- `0.0.1`
+
+### 版本号约束
 
 > `major`.`minor`.`patch` 主版本号·次版本号·修补版本号
 
@@ -106,6 +114,9 @@
 1. 安装nrm `$ npm i nrm -g`
 2. 查看可使用的源 `$ nrm ls`
 3. 切换源 `$ nrm use taobao`
+4. 添加源 `$ nrm add <name> <protocol://address>`
+5. 删除源 `$ nrm delete <name>`
+6. 源测速 `$ nrm test`
 
 ---
 
