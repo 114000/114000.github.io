@@ -43,3 +43,7 @@
 
 - [读书](/read/README.md)
 
+## 练习
+
+- [打字练习 qwerty-learner](https://qwerty-learner.vercel.app/)
+
