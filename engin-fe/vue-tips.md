@@ -1,5 +1,7 @@
 ### 多插槽
 
+[vue3 插槽](https://vue3js.cn/docs/zh/guide/component-slots.html#%E8%A7%A3%E6%9E%84%E6%8F%92%E6%A7%BD-prop)
+
 ``` html
 <!-- components -->
 <div>
@@ -30,25 +32,24 @@
 
 ``` html
 <!-- components -->
-<slot :row="item" :index="i">
-  <div
-    class="cp-sp-table__col"
-    :style="styles[j]"
-    v-for="(f, j) in fields"
-    :key="j">{{ item[f] }}</div>
-</slot>
+<tr>
+  <slot :item="aItem" :index="i">
+    <!-- slot default -->
+    <td
+      class="cp-sp-table__col"
+      :style="styles[j]"
+      v-for="(f, j) in fields"
+      :key="j">{{ item[f] }}</td>
+  </slot>
+</tr>
  
  
 <!-- parent -->
 <Component>
-  <div slot-scope="d" :style="{ paddingTop: '0.7rem' }">
-    <XXX
-      :color="d.item.color"
-      :max="state.max"
-      :min="0.05"
-      :name="d.item.name"
-      :value="d.item.value" />
-  </div>
+  <template v-slot:default="d">
+    <td>{{ d.index }}<td>
+    <td>{{ d.item[0] }}<td>
+  </template>
 </Component>
 ```
 

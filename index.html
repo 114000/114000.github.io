@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>文档集合</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+    title="docsify-darklight-theme" type="text/css" />
+  <style>
+    hr {
+      border: none;
+      border-bottom: 1px solid #eee;
+      margin: 1em;
+    }
+
+    /* scrollbar style */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 3px;
+      background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  
+  </style>
 </head>
+
 <body>
   <!-- <nav>
     <a href="#/">EN</a>
@@ -20,13 +48,75 @@
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
-      themeColor: '#722ed1'
+      auto2top: true,
+      themeColor: '#722ed1',
+      darklightTheme: {
+        // siteFont: "PT Sans",
+        defaultTheme: 'dark',
+        codeFontFamily: 'Monaco, Courier New, monospace',
+        // bodyFontSize: '14px',
+        dark: {
+          accent: '#6fffd5',
+          toogleBackground: '#ffffff',
+          background: '#091a28',
+          textColor: '#b4b4b4',
+          codeTextColor: '#ffffff',
+          codeBackgroudColor: '#0e2233',
+          borderColor: '#0d2538',
+          blockQuoteColour: '#858585',
+          highlightColor: '#6fffd5',
+          sidebarSublink: '#b4b4b4',
+          codeTypeColor: '#ffffff',
+          coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+          toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+        },
+        light: {
+          accent: '#722ed1',
+          toogleBackground: '#091a28',
+          background: '#ffffff',
+          textColor: '#34495e',
+          codeTextColor: '#525252',
+          codeBackgroudColor: '#f8f8f8',
+          borderColor: 'rgba(0, 0, 0, 0.07)',
+          blockQuoteColor: '#858585',
+          highlightColor: '#722ed1',
+          sidebarSublink: '#b4b4b4',
+          codeTypeColor: '#091a28',
+          coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+          toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+        },
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            var url =
+              'https://github.com/114000/114000.github.io/blob/main/' +
+              vm.route.file
+            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n';
+            return (
+              html +
+              '\n\n----\n Last modified {docsify-updated} ' +
+              editHtml
+            );
+          });
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- docsify的js依赖 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- emoji表情支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 图片放大缩小支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 搜索功能支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 </body>
+
 </html>

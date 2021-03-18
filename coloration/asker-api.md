@@ -71,7 +71,7 @@ from 0.8.0
 
 > define
 
-```ts
+```typescript
 // copy from nestjs
 export enum HttpStatus {
   continue = 100,
@@ -123,6 +123,6 @@ export enum HttpStatus {
 
 > use
 
-``` js
+``` typescript
 import { HttpStatus } from '@coloration/asker'
 ```

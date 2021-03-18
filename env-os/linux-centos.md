@@ -31,14 +31,14 @@ $ ssh-keygen -t rsa -C "your_email@example.com"
 $ cd /usr/local/src
 
 #### 下载 - 此处下载的是编译好的linux版本的node, 如果下载不带平台后缀的需要自行编译
-$ wget https://npm.taobao.org/mirrors/node/v12.14.1/node-v12.14.1-linux-x64.tar.gz
+$ wget https://npm.taobao.org/mirrors/node/v14.16.0/node-v14.16.0-linux-x64.tar.gz
 
 #### 解压 - 解压后可正常使用
-$ tar xvf node-v12.14.1-linux-x64.tar.gz
+$ tar xvf node-v14.16.0-linux-x64.tar.gz
 
 #### 添加到命令行 - 需要root权限 软连接
-$ ln -s /usr/local/src/node-v12.14.1-linux-x64/bin/node /usr/bin/node
-$ ln -s /usr/local/src/node-v12.14.1-linux-x64/bin/npm /usr/bin/npm
+$ ln -s /usr/local/src/node-v14.16.0-linux-x64/bin/node /usr/bin/node
+$ ln -s /usr/local/src/node-v14.16.0-linux-x64/bin/npm /usr/bin/npm
 ```
 
 ### 添加环境变量

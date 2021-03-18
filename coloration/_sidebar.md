@@ -1,4 +1,4 @@
-* [导航](/)
+* [首页](/)
 
 - [Asker API](coloration/asker-api.md)
 - [Asker Manual](coloration/asker-manual.md)

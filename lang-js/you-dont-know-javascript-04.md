@@ -1,14 +1,6 @@
----
-title: 《你不知道的JavaScript（中卷）》04 类型和语法- 读书笔记
-date: 2020-11-25
-categories:
-- [杂谈, 读书笔记]
-- [编程语言, JavaScript]
-tag: 
-- JavaScript
-- 读书笔记
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
----
+![](https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg)
+
+2020-11-25
 
 ## 类型
 
