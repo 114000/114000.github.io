@@ -20,3 +20,7 @@ title: 树莓派
 - [图灵派（Turing Pi）](https://turingpi.com/)
 - [一个语音工具的集成软件，文档教你如何在树莓派上使用 Node.js，搭建自己的语音助手，可以识别语音，也可以将文本转为语音。](https://github.com/webfansplz/volute)
 - [使用 Raspberry Pi 学习操作系统开发 - 这是一个免费英文教程，教大家怎么用树莓派，一步步开发一个简单的操作系统内核，每一步都有实例代码。](https://s-matyukevich.github.io/raspberry-pi-os/)
+
+## PLC
+
+- [Snap7 西门子S7系列PLC的通信库 简介](https://blog.csdn.net/lcb411/article/details/101147181)

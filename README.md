@@ -16,7 +16,7 @@
 - [Language-CSS](/lang-css/README.md)
 - [SVG](/svg/README.md)
 - [Language-Python](/lang-py/README.md)
-
+- [Language-C++](/lang-cpp/README.md)
 
 ## 工程 & 项目管理
 

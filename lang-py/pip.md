@@ -15,3 +15,8 @@
     - https://mirrors.aliyun.com/pypi/simple
     - http://mirrors.cloud.tencent.com/pypi/simple
     - http://pypi.douban.com/simple
+
+
+### Trouble Shooting 
+
+> pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
