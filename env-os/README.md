@@ -2,6 +2,7 @@
 title: 关于系统知识
 date: 2017-01-01
 ---
+
 - [线程知识介绍 WILL_TRAN](https://www.internalpointers.com/post/gentle-introduction-multithreading)
 - [编译器基础 js](http://notes.eatonphil.com/compiler-basics-lisp-to-assembly.html)
 - [从零开始写一个操作系统](https://github.com/cfenollosa/os-tutorial)

@@ -16,3 +16,18 @@ title: 可视化
 - [Svg-text-animate 一个在浏览器环境中将输入文本转化为描边动画的工具](https://github.com/oubenruing/svg-text-animate)
 - [Textures.js - 一个 JS 纹理库，基于 D3.js。](https://riccardoscalco.it/textures/)
 - [vega - 一个制作互动式图表的 JS 库。](https://vega.github.io/vega-lite/)
+
+- BI
+  - https://github.com/apache/superset
+  - https://github.com/metabase/metabase
+  - https://www.querybook.org/
+
+- Visualization tools
+  - https://cube.dev/docs/introduction
+
+- Charting Libraries
+  - https://www.chartjs.org/
+  - https://nivo.rocks/ React wrap d3
+  - https://recharts.org/en-US/ React wrap d3
+  - https://www.d3-graph-gallery.com/ d3
+  - https://echarts.apache.org/en/index.html

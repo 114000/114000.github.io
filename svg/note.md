@@ -10,3 +10,4 @@
 - [Feature Icons - 一个开源图标库，提供一些 24x24 的常用图标。](https://github.com/feathericons/feather)
 - [Vector Logo Zone 该网站提供 SVG 格式的各种 Logo 文件下载，目前一共有 1,080个公司/项目的3,458个 Logo。](https://www.vectorlogo.zone/)
 - [SVGOMG 一个 SVG 图像的在线代码优化工具，用来降低 SVG 文件的大小](https://jakearchibald.github.io/svgomg/)
+- [如何创建 SVG 网格布局和动画](https://www.cassie.codes/posts/swipey-image-grids/)

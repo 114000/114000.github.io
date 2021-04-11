@@ -77,7 +77,7 @@ const pcA = new RTCPeerConnection()
   // *业务功能 demo1(非必须)
   await pcA.addStream(cameraStream)
 
-  // * 业务功能 demo2(非必须)
+  // *业务功能 demo2(非必须)
 
   pcA.addTrack(stream)
 
@@ -86,9 +86,8 @@ const pcA = new RTCPeerConnection()
   dc.onmessage = e => console.log(e.data)
   dc.onopen = e => console.log('Connection opened!')
 
-  // *监听 ice 的变化, 重新获取 sdp (非必须)
-  // 每次有新的节点变化时, 都会是 sdp 变化, 因为 ice 会选择最优的节点路径
-  pcA.onicecandidate = e => console.log(JSON.stringify(pcA.localDescription /* this is peer A sdp */))
+
+
 
 // peer A 是请求者
 const pcAOffer = await pcA.createOffer()
@@ -96,12 +95,14 @@ const pcAOffer = await pcA.createOffer()
 // 设置 A 的本地描述, 包含peer A 的 SDP
 await pcA.setLocalDescription(pcAOffer)
 
+// 监听 ice 的变化, 重新获取 sdp
+// 每次有新的节点变化时, 都会是 sdp 变化, 因为 ice 会选择最优的节点路径
 // 信令服务器是自建服务, 用来交换 peer 之间的信息 http or socket
-signalingServerApi.offer(pcAOffer)
+pcA.addEventListener('icecendidate', () => {
+  signalingServerApi.offer(pcA.localDescription)
+})
 
 // A 接收到请求方的答复, 将对方的描述保存起来
-const pcAOffer = await signalingServerApi.onOffer()
-
 const pcBAnswer = await signalingServerApi.onAnswer()
 
 pc.setRemoteDescription(pcBAnswer)
@@ -113,10 +114,7 @@ pc.setRemoteDescription(pcBAnswer)
 const pcAOffer = await signalingServerApi.onOffer()
 
 const pcB = new RTCPeerConnection()
-
-  // *监听 ice 的变化, 重新获取 sdp(非必须)
-  // 每次有新的节点变化时, 都会是 sdp 变化, 因为 ice 会选择最优的节点路径
-  pcA.onicecandidate = e => console.log(JSON.stringify(pcA.localDescription /* this is peer A sdp */))
+ 
 
   // * 业务功能 demo3(非必须)
   let pcBDataChannel = null
@@ -133,7 +131,9 @@ const pcBAnswer = await pcB.createAnswer()
 
 pcB.setLocalDescription(pcBAnswer)
 
-signalingServerApi.answer(pcBAnswer)
-
+// 监听 ice 的变化, 重新获取 sdp
+pcA.addEventListener('icecendidate', () => {
+  signalingServerApi.answer(pcB.localDescription)
+})
 
 ```
