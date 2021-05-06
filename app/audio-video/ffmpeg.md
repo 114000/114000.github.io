@@ -1,6 +1,7 @@
 ## startup
 
 ``` bash
+# macOS
 $ brew install ffmpeg
 ```
 
@@ -159,8 +160,8 @@ output_%3d.jpg
 $ ffpeg \
 -y \
 -i input.mp4 \
-- ss 00:00:04 \
-- vframes 1 -q:v 2 \
+-ss 00:00:04 \
+-vframes 1 -q:v 2 \
 output.jpg
 ```
 
