@@ -2,6 +2,89 @@
 title: 树莓派
 ---
 
+## Note:
+
+安装谷歌拼音输入法
+
+- `sudo apt-get install fcitx fcitx-googlepinyin`
+
+连接中文路由需要使用 add_network
+
+``` bash
+$ sudo wpa_cli
+> add_network
+1 # id
+> set_network 1 
+
+```
+
+## boot
+
+### 烧录系统
+
+1. 下载镜像: <https://www.raspberrypi.org/software/>
+2. 格式化sd卡: 磁盘工具 or SD Card Formatter
+
+#### MacOS
+
+3.1 查看磁盘路径 `diskutil list` 记录路径 e.g. `/dev/disk2`
+3.2 取消tf卡挂载 `diskutil unmountDisk <sd_path>` 
+3.3 烧录镜像 `sudo dd if=<img_path> of=<sd_path> bs=1m;sync` [dd 命令](https://www.runoob.com/linux/linux-comm-dd.html)
+3.4 退出tf `$ diskutil eject <sd_path>`
+
+
+
+
+
+
+
+
+### 自动连接wifi
+
+有系统界面的不能用这个方法
+
+第一次启动前在根目录创建 `wpa_supplicant.conf` 文件.
+
+```
+country=CN
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+        ssid="第一个WIFI名称，优先级1"
+        psk="WIFI密码"
+        key_mgmt=WPA-PSK
+        priority=1
+}
+network={
+        ssid="第二个WIFI名称，无密码，优先级2"
+        key_mgmt=NONE
+        priority=2
+}
+```
+
+### 开启远程 ssh 功能
+
+有系统界面的不能用这个方法
+
+第一次启动前在根目录创建 `ssh` 空文件.
+
+
+
+## flow
+
+- 进入系统设置: `$ sudo raspi-config`
+- 重启: `$ sudo reboot`
+- 安装: `$ sudo apt install ffmpeg`
+- 卸载: 
+  - `$ sudo apt remove python`
+  - `$ sudo apt autoremove`
+- 软链接:
+  - `$ sudo ln -s /usr/bin/python3 /usr/bin/python`
+- 网络:
+  - 查看可用wifi `$ sudo iwlist wlan0 scan | grep SSID`
+  - 查看wifi 信道(系统地区影响信道): `$sudo iwlast wlan0 freq`
+
+
 ### 树莓派 
 
 - [树莓派 GPIO 介绍](https://www.tomshardware.com/reviews/raspberry-pi-gpio-pinout,6122.html)
