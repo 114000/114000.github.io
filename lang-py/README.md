@@ -2,12 +2,28 @@
 
 - [基本](/lang-py/py-syntax.md)
 - [OO](/lang-py/py-oo.md)
-
+- [API module](/lang-py/py-api-module.md)
 
 ## 工程
 
 - [pip](/lang-py/pip.md)
 - [flask](/lang-py/flask.md)
+- [Github:python-flask-boilerplate](https://github.com/114000/python-flask-boilerplate)
+
+
+## eBook
+
+- [x] [编程小白的第一本Python入门书](https://www.ituring.com.cn/book/1863)
+- [ ] [精通Python设计模式（第2版）](https://www.ituring.com.cn/book/2680) `- chapter3`
+- [ ] [Python函数式编程（第2版）](https://www.ituring.com.cn/book/2658)
+- [ ] [流畅的Python](https://www.ituring.com.cn/book/1564)
+- [ ] [Python 编程导论(第二版)](https://www.ituring.com.cn/book/1966)
+- [ ] [SQLAlchemy：Python数据库实战](https://www.ituring.com.cn/book/1986)
+- [ ] [Flask Web开发：基于Python的Web应用](https://www.ituring.com.cn/book/2463)
+- [ ] [Python网络爬虫权威指南（第2版）](https://www.ituring.com.cn/book/1980)
+- [ ] [Python 机器学习基础](https://www.ituring.com.cn/book/1915)
+- [ ] [Python 计算机视觉编程](https://www.ituring.com.cn/book/1349)
+
 
 ## 有趣的外链
 

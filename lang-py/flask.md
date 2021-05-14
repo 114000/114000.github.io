@@ -2,7 +2,7 @@
 
 2020-11-01
 
-- [pip](./pip.md)
+- [pip](lang-py/pip.md)
 
 ## Install
 
@@ -19,7 +19,7 @@
 
 > /app.py
 
-```py
+```python
 
 from flask import Flask
 app = Flask(__name__)

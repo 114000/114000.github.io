@@ -72,7 +72,18 @@ mac 修改域名指向 `/etc/hosts` 需要管理员权限
 - `|` : 管道 pipeline。左边的输出成为右边的输入 
 
 
+## 安装 xz 解压工具
 
+下载 <https://tukaani.org/xz/>
+
+``` bash
+$ tar -zxf xz-5.2.5.tar.gz
+$ cd xz-5.2.5
+$ ./configure
+$ make & make install
+
+$ xz -d ubuntu-20.04.2-preinstalled-server-arm64+raspi.img.xz
+```
 
 ### Command Line
 

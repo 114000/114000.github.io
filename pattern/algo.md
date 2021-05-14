@@ -1,3 +1,42 @@
+### 计算平方根 
+
+#### 二分法
+
+``` py
+x = 25
+epsilon = 0.01
+numGuesses = 0
+low = 0.0
+high = max(1.0, x)
+ans = (high + low)/2.0
+while abs(ans**2 - x) >= epsilon:
+    print('low =', low, 'high =', high, 'ans =', ans)
+    numGuesses += 1
+    if ans**2 < x:
+        low = ans
+    else:
+        high = ans
+    ans = (high + low)/2.0
+print('numGuesses =', numGuesses)
+print(ans, 'is close to square root of', x)
+```
+
+#### 牛顿-拉夫森法
+
+> 如果存在一个值guess 是多项式p的根的近似值，那么guess - p(guess)/p' (guess)就是一个更好的近似值
+
+``` py
+#利用牛顿-拉弗森法寻找平方根
+#寻找x，满足x**2-24在epsilon和0之间
+epsilon = 0.01
+k = 24.0
+guess = k/2.0
+while abs(guess*guess - k) >= epsilon:
+    guess = guess - (((guess**2) - k)/(2*guess))
+print('Square root of', k, 'is about', guess)
+```
+
+
 - [Timsort 入门 - Python 的默认排序算法是 Timsort，它的表现据说好于快排（quicksort）。本文解释了这种算法的基本原理。"](https://hackernoon.com/timsort-the-fastest-sorting-algorithm-youve-never-heard-of-36b28417f399) 
 - [各种算法的 Python 实现](https://github.com/TheAlgorithms/Python)
 - [数据结构和算法必知必会的50个代码实](https://github.com/wangzheng0822/algo)
