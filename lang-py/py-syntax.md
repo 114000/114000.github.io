@@ -112,6 +112,8 @@ def addUser (name, ip = None, address = ''):
 
 
 ''' 不定参 注意参数结构 '''
+# 更多详见拆包部分
+
 from functools import reduce
 
 def add_ (*args):
@@ -288,6 +290,25 @@ im[:,-1]               # 最后一列
 im[-2,:] (or im[-2])   # 倒数第二行
 ```
 
+#### 列表推到 list comprehension
+
+``` py
+symbols = '$¢£¥€¤'
+
+#
+
+codes = []
+for s in symbols:
+  if s > 127:
+    codes.append(ord(s))
+
+# 
+codes = list(filter(lambda c: c > 127, map(ord, symbols)))
+
+# 
+codes = [ord(s) for s in symbols if ord(s) > 127]
+```
+
 
 ### dict
 
@@ -344,6 +365,31 @@ a[2] # => 3
 a.count(3) # 1
 ```
 
+### collections.namedtuple 具名元组
+
+```py
+# define
+City = namedtuple('City', 'name country populartion coordinates')
+City = namedtuple('City', ['name', 'country', 'populartion', 'coordinates'])
+
+# C
+tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667))
+tokyo = City(name='Tokyo', country='JP', population=36.933, coordinates=(35.689722,
+139.691667))
+
+# R
+tokyo.country # => 'JP'
+
+# class property
+City._fields # 
+# class method
+City._make(iterable) # City(*tokyoData)
+# instance method
+tokyo.asdict()
+
+
+```
+
 
 ### Set
 
@@ -378,3 +424,61 @@ y - x # {'k', 'a'}
 ```
 
 
+## 内置序列
+
+#### 按存储类型分类
+
+- 容器序列(存引用, 任意类型): `list`, `tuple`, `collection.deque` 
+
+- 扁平序列(存值, 单一类型): `str`, `bytes`, `bytearray`, `memoryview`, `array.array`
+
+#### 按可变性分类
+
+- 可变序列: `list`, `bytearray`, `array.array`, `collection.deque`, `memoryview`
+
+- 不可变序列: `tuple`, `str`, `bytes`
+
+
+
+### 生成器表达式 
+
+``` py
+colors = ['black', 'white']
+sizes = ['S', 'M', 'L']
+
+for tshirt in ('%s %s' % (c, s) for c in colors for s in sizes):
+  print(tshirt)
+```
+
+### 拆包 
+
+``` py
+a, b = b, a
+lat, lng = (33.9425, -119.4080)
+_, filename = os.path.split('/home/user/.ssh/id-rsa.pub')
+a, b, *rest = range(5) # (0, 1, [2, 3, 4])
+*head, b, c = range(5)
+a, *body, c = range(5)
+
+for name, cc, pop, (latitude, longitude) in metro_areas:
+  pass
+
+```
+
+### 切片
+
+`[start:stop:step]` => `seq.__getitem__(slice(start, stop, step))`
+
+``` py
+s = 'bicycle'
+s[::3]  # 'bye'
+s[::-1] # 'elcycib'
+s[::-2] # 'eccb'
+
+l = list(range(10)) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+l[2:5] = [20, 30]   # [0, 1, 20, 30, 5, 6, 7, 8, 9]
+del l[5:7]          # [0, 1, 20, 30, 5, 8, 9]
+l[3::2] = [11, 22]  # [0, 1, 20, 11, 5, 22, 9]
+l[2:5] = 100        # Error 
+l[2:5] = [100]      # [0, 1, 100, 22, 9]
+```
