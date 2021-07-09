@@ -7,12 +7,7 @@
 #### Install
 
 ``` bash
-$ yum install yum-utils device-mapper-persistent-data lvm2 -y
-
-## 国内源 https://mydream.ink/utils/container/docker-ce.repo
-$ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-
-$ yum install docker-ce docker-ce-cli containerd.io -y
+$ curl -fsSL https://get.docker.com/ | sh
 
 $ systemctl start docker
 
@@ -20,14 +15,21 @@ $ systemctl start docker
 $ systemctl enable docker
 ```
 
-#### remove docker
+#### Uninstall
 
 ``` bash
-# 卸载
-$ yum remove docker-ce
-# 删除数据
-$ sudo rm -rf /var/lib/docker
+# 列出包含docker字段的软件的信息
+$ rpm -qa | grep docker
+
+$ yum remove <list>
+# e.g.
+$ yum remove docker-ce-cli.x86_64 1:19.03.5-3.el7
 ```
+
+### Upgrade
+
+1. Uninstall 
+2. Install
 
 #### 修改 docker 镜像源
 

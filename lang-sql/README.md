@@ -4,6 +4,36 @@ date: 2019-01-01
 
 ---
 
+
+## SQLite
+
+### startup
+
+``` bash
+$ sqlite3
+> .open db.sqlite # 所在目录创建 <db.sqlite> 文件
+> .databases      # 查看数据库
+> .quit           # 退出命令
+```
+
+### 表操作
+
+``` bash
+# list
+> .tables # .table
+
+# delete
+> drop table <tablename>;
+```
+
+### 清空表
+
+``` bash
+> .open db.sqlite
+> delete from <tablename>;
+```
+
+
 ### Sql
 
 - [数据库基础](http://webdam.inria.fr/Alice/)
