@@ -114,6 +114,16 @@ $ docker commit -m <commit_message> \
 ## 删除所有使用该镜像的容器
 $ docker rm <container_id> | <container_name>
 $ docker rmi <image_repository> | <image_id>
+
+## 删除所有未使用的镜像
+docker image prune -a
+docker image prune -a -f 
+
+## 删除异常停止的镜像
+docker rm `docker ps -a | grep Exited | awk '{print $1}'`
+
+## 删除名称或标签为none的镜像
+docker rmi -f  `docker images | grep '<none>' | awk '{print $3}'` 
 ```
 
 ### 推送镜像 
